@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes Automator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="confetti-container" id="confetti-container"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-birthday-cake"></i>
+                <h1>Birthday Wishes Automator</h1>
+            </div>
+            <p class="tagline">Never forget to send birthday wishes again!</p>
+        </header>
+
+        <main class="main-content">
+            <div class="card greeting-card" id="greeting-card">
+                <div class="card-front">
+                    <div class="card-content">
+                        <h2>Happy Birthday!</h2>
+                        <div class="decoration balloon1"></div>
+                        <div class="decoration balloon2"></div>
+                        <div class="decoration balloon3"></div>
+                        <div class="cake">
+                            <div class="plate"></div>
+                            <div class="layer bottom"></div>
+                            <div class="layer middle"></div>
+                            <div class="layer top"></div>
+                            <div class="icing"></div>
+                            <div class="candle">
+                                <div class="flame"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-inside">
+                    <p>Dear <span class="recipient-name">[Name]</span>,</p>
+                    <p class="message-preview">Wishing you a wonderful birthday filled with joy and happiness!</p>
+                    <p>Best regards,</p>
+                    <p class="sender-name">[Your Name]</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="form-group">
+                    <label for="recipient-name"><i class="fas fa-user"></i> Recipient Name</label>
+                    <input type="text" id="recipient-name" placeholder="Enter recipient's name">
+                </div>
+
+                <div class="form-group">
+                    <label for="recipient-email"><i class="fas fa-envelope"></i> Recipient Email</label>
+                    <input type="email" id="recipient-email" placeholder="Enter recipient's email">
+                </div>
+
+                <div class="form-group">
+                    <label for="birthday-date"><i class="fas fa-calendar-alt"></i> Birthday Date</label>
+                    <input type="date" id="birthday-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Custom Message</label>
+                    <textarea id="message" rows="4" placeholder="Write your birthday message here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="sender-name"><i class="fas fa-signature"></i> Your Name</label>
+                    <input type="text" id="sender-name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="sender-email"><i class="fas fa-at"></i> Your Email</label>
+                    <input type="email" id="sender-email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="send-time"><i class="fas fa-clock"></i> Send Time</label>
+                    <select id="send-time">
+                        <option value="morning">Morning (9:00 AM)</option>
+                        <option value="afternoon" selected>Afternoon (12:00 PM)</option>
+                        <option value="evening">Evening (6:00 PM)</option>
+                        <option value="custom">Custom Time</option>
+                    </select>
+                    <input type="time" id="custom-time" style="display: none;">
+                </div>
+
+                <button id="preview-btn" class="btn"><i class="fas fa-eye"></i> Preview Card</button>
+                <button id="schedule-btn" class="btn primary"><i class="fas fa-calendar-check"></i> Schedule Wish</button>
+            </div>
+        </main>
+
+        <section class="scheduled-wishes" id="scheduled-wishes">
+            <h2><i class="fas fa-list"></i> Scheduled Wishes</h2>
+            <div class="wish-list" id="wish-list">
+                <div class="empty-state">
+                    <i class="fas fa-bell-slash"></i>
+                    <p>No scheduled wishes yet</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal" id="preview-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Preview Your Birthday Card</h2>
+            <div class="preview-card" id="preview-card"></div>
+            <button id="confirm-schedule" class="btn primary">Confirm & Schedule</button>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

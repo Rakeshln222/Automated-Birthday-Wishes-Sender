@@ -1,0 +1,57 @@
+Features of this Application:
+
+Interactive Birthday Card:
+
+Animated 3D card that flips to show the message
+
+Decorative elements like balloons and a cake with flickering candle
+
+
+Form Validation:
+
+Validates all required fields
+
+Checks for valid email formats
+
+Ensures birthday date is in the future
+
+
+Scheduling Options:
+
+Choose from preset times or set a custom time
+
+Visual calendar picker for birthday date
+
+
+Preview Functionality:
+
+See how the birthday card will look before scheduling
+
+Confirm before finalizing
+
+
+Scheduled Wishes Management:
+
+View all scheduled wishes in a list
+
+Edit or delete scheduled wishes
+
+Persistent storage using localStorage
+
+
+Visual Feedback:
+
+Success/error notifications
+
+Confetti animation when a wish is scheduled
+
+Smooth animations throughout the interface
+
+
+Responsive Design:
+
+Works on mobile and desktop devices
+
+Adapts layout for different screen sizes
+
+To use this application, simply save the three files in the same directory and open the index.html file in a web browser. In a production environment, you would need to connect this to a backend service that actually sends the emails at the scheduled times.
